@@ -8,7 +8,7 @@ var resetButton= document.querySelector("#reset");
 var easybtn= document.querySelector("#easyBtn");
 var hardbtn= document.querySelector("#hardBtn");
 var numsquares=6;
-
+let triesCount=0;
 easybtn.addEventListener("click",function()
 {  
    numsquares=6;
@@ -77,7 +77,7 @@ for (var i=0; i<squares.length; i++)
         //compare with the right color
         if (clickedcolor === pickedcolor)
         {
-        	messagedisplay.textContent="Correct!"
+        	messagedisplay.textContent=`${triesCount} attempts`
         	changeColors(clickedcolor);
         	h1.style.backgroundColor= clickedcolor;
         	resetButton.textContent="Play again?"
@@ -85,6 +85,7 @@ for (var i=0; i<squares.length; i++)
         }
         else{
         this.style.backgroundColor="#232323";
+		triesCount++;
         messagedisplay.textContent="Try again"; 
         }
 	});
