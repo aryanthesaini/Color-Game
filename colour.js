@@ -28,6 +28,7 @@ easybtn.addEventListener("click",function()
    		squares[i].style.display="none";
    	}
    }
+   messagedisplay.textContent="";
 
 });
 
@@ -47,6 +48,7 @@ hardbtn.addEventListener("click", function(){
    		squares[i].style.display="block";
    	
    }
+   messagedisplay.textContent="";
 
 })
 resetButton.addEventListener("click", function(){
@@ -77,7 +79,15 @@ for (var i=0; i<squares.length; i++)
         //compare with the right color
         if (clickedcolor === pickedcolor)
         {
-        	messagedisplay.textContent=`${triesCount} attempts`
+			console.log(triesCount)
+			if(triesCount==0){
+				messagedisplay.textContent=`1ST ATTEMPT?? WOW`
+			}
+			else{
+				messagedisplay.textContent=`${triesCount} attempts`
+			}
+        	
+			triesCount=0;
         	changeColors(clickedcolor);
         	h1.style.backgroundColor= clickedcolor;
         	resetButton.textContent="Play again?"
