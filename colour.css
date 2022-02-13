@@ -5,9 +5,9 @@ body{
 }
 
 .square{
-	width: 30%;
-	background: purple;
-	padding-bottom: 30%;
+	width: 12%;
+	/* background: purple; */
+	padding-bottom: 12%;
 	float: left;
 	margin: 1.66%;
 	border-radius: 17%;
@@ -15,8 +15,9 @@ body{
 }
 
 #container{
-    margin: 20px auto;
-	max-width: 600px;
+	margin: 20px auto;
+	max-width:100%;
+	margin-left: 100px;
 }
 
 h1{
@@ -70,4 +71,24 @@ button:hover{
 #message{
 	display: inline-block;
 	width: 20%;
+}
+
+@media screen and (max-width: 768px){
+	
+
+	.square{
+		width: 20%;
+		/* background: purple; */
+		padding-bottom: 20%;
+		float: left;
+		margin: 1.66%;
+		border-radius: 17%;
+		transition: background 0.5s;
+	}
+	
+	#container{
+		margin: 20px auto;
+		max-width:100%;
+		margin-left: 20px;
+	}
 }
